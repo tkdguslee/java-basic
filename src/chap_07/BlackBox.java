@@ -53,4 +53,13 @@ public class BlackBox {
     static void callServiceCenter() {
         System.out.println("서비스 센터(1588-0000) 로 연결합니다.");
     }
+
+    void appendModelName(String modelName) {
+        this.modelName += modelName;
+        // this.라고 적어주면 이 클래스의 인스턴스 변수에 직접 바로 접근할 수 있다.
+
+        // 다시 복습!
+        // 메소드 내에서 사용하려는 인스턴스 변수와 파라미터 변수의 이름이 똑같다라고 하면 this.을 붙여가지고
+        // 이건 인스턴스 변수야라고 명확히 알 수 있다. 물론 뒤에 이름이 다르다면 this.을 안적어줘두된다!
+    }
 }

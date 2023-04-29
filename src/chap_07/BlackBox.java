@@ -6,8 +6,30 @@ public class BlackBox {
     int price; // 가격
     String color; // 색상
     // 인스턴스변수 또는 필드라고도 함
+    int serialNumber; // 시리얼 번호
+    static int counter = 0; // 시리얼 번호를 생성해주는 역할 (처음엔 0이었다가 ++ 연산을 통해서 값을 증가) 1, 2, ...
     static boolean canAutoReport = false; // 자동 신고 기능
     // 여기서 static을 붙이면 클래스 변수라고함
+
+    // 생성자는 보통 변수들 밑에 적어준다.
+    // 생성자를 만드는 방법은 클래스 명과 똑같이 만들어주면 된다.
+    // 생성자는 반환형이 따로 없다.
+    // 객체가 생성될때 자동으로 그냥 호출되는 메소드로 이해하면 된다.
+    BlackBox() {
+        System.out.println("기본 생성자 호출");
+        this.serialNumber = ++counter;
+        System.out.println("새로운 시리얼 넘버를 발급받았습니다 : " + this.serialNumber);
+    }
+
+    BlackBox(String modelName, String resolution, int price, String color) {
+        this(); // 기본 생성자 호출
+
+        System.out.println("사용자 정의 생성자 호출");
+        this.modelName = modelName;
+        this.resolution = resolution;
+        this.price = price;
+        this.color = color;
+    }
 
     void autoReport() {
         if (canAutoReport) {

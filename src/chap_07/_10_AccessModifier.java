@@ -2,6 +2,11 @@ package chap_07;
 
 public class _10_AccessModifier {
     public static void main(String[] args) {
+        // 캡슐화(Encapsulation)란?
+        // 필요한 것들끼리만 하나의 캡슐에 담는다라는 뜻.
+        // 정보은닉(Information hiding) : 정보를 숨기는 것이다.
+
+
         // 접근 제어자
         // 말 그대로 접근을 제어하는거다.
         // 범위를 제어한다? 느낌

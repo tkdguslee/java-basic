@@ -17,9 +17,17 @@ public class _12_Inheritance {
         System.out.println(factoryCam.name);
         System.out.println(speedCam.name);
 
+        System.out.println("-----------------------------");
+
         camera.takePicture();
         factoryCam.recordVideo();
         speedCam.takePicture();
+
+        System.out.println("-----------------------------");
+
+        factoryCam.detectFire();
+        speedCam.checkSpeed();
+        speedCam.recognizeLicensePlate();
     }
 }
 
